@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Chakra Petch', sans-serif; }
+
+body {
+  background: #FFF4FD; }
+
+main {
+  margin: 0 9.8% 0 6.3%; }
+
+header {
+  background-image: linear-gradient(90deg, #4180F6 0%, #F7C9F3 100%);
+  box-shadow: 0 1px 0 0 #110038;
+  width: 100%;
+  height: 1.4%;
+  display: flex;
+  justify-content: left; }
+  header p {
+    margin: 0.2% 0 0.2% 0.5%;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0; }
+
+.logo_buttons {
+  margin-top: 2.4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .logo_buttons .buttons_logo {
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center; }
+    .logo_buttons .buttons_logo button {
+      background-color: #F7C9F3;
+      border: 1px solid #110038;
+      box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+    .logo_buttons .buttons_logo button:hover {
+      outline: 1px dotted black;
+      outline-offset: -4px; }
+    .logo_buttons .buttons_logo .create_gif {
+      width: 144px;
+      height: 36px;
+      margin-right: 1.1%; }
+    .logo_buttons .buttons_logo .choose_topic {
+      width: 131px;
+      height: 36px; }
+    .logo_buttons .buttons_logo .list_topic {
+      width: 36px;
+      height: 36px;
+      margin-right: 1.1%; }
+    .logo_buttons .buttons_logo a {
+      width: 76px;
+      height: 18px;
+      color: #110038;
+      letter-spacing: 0;
+      line-height: 18px;
+      box-sizing: border-box; }
+      .logo_buttons .buttons_logo a span {
+        text-decoration: underline; }
+    .logo_buttons .buttons_logo a:hover {
+      outline: 1px dotted black; }
+
+.search_tab {
+  margin-top: 1%;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .search_tab .navbar_search {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    height: 24px;
+    display: flex;
+    justify-content: left;
+    align-items: center; }
+    .search_tab .navbar_search p {
+      font-size: 14px;
+      color: #FFFFFF;
+      margin-left: 0.2%;
+      font-weight: bold; }
+  .search_tab .input_bar_search input {
+    color: #B4B4B4;
+    line-height: 22px;
+    letter-spacing: 0;
+    width: 87.5%;
+    height: 48px;
+    margin: 0.7% 0.7% 0.7% 1%;
+    padding-left: 16px;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000; }
+  .search_tab .input_bar_search button {
+    width: 108px;
+    height: 36px;
+    color: #B4B4B4;
+    line-height: 18px; }
+  .search_tab .input_bar_search i {
+    margin-right: 5%; }
+
+.container_sugest {
+  margin-top: 2.4%; }
+  .container_sugest .container_today_sugest {
+    width: 100%;
+    height: 32px;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D; }
+    .container_sugest .container_today_sugest p {
+      font-size: 14px;
+      color: #110038;
+      padding-top: 7px;
+      padding-left: 7px; }
+  .container_sugest .container_gif_today {
+    margin-top: 19px; }
+    .container_sugest .container_gif_today ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .container_sugest .container_gif_today ul li {
+        background-color: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        list-style: none;
+        width: 288px;
+        height: 313px; }
+    .container_sugest .container_gif_today .bar_sugest {
+      background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6);
+      height: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .container_sugest .container_gif_today .bar_sugest p {
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        font-weight: bold;
+        margin-left: 2%; }
+      .container_sugest .container_gif_today .bar_sugest .button_close_sugest {
+        height: 16px;
+        width: 18px;
+        margin-right: 3px; }
+    .container_sugest .container_gif_today .container_imgs_sugest img {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      z-index: 0; }
+    .container_sugest .container_gif_today .container_imgs_sugest img:hover {
+      outline: 1px dotted black; }
+    .container_sugest .container_gif_today .container_imgs_sugest .button_vermas_sugest {
+      position: relative;
+      z-index: 1;
+      bottom: 42px;
+      left: 7px;
+      background-color: #4180F6;
+      width: 81px;
+      height: 31px;
+      border: 1px solid #4C2F99;
+      box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF; }
+    .container_sugest .container_gif_today .container_imgs_sugest .button_vermas_sugest:hover {
+      outline: 1px dotted black;
+      outline-offset: -4px; }
+
+.container_gif_trend {
+  margin-top: 4.1%; }
+  .container_gif_trend .container_trend_bar {
+    width: 100%;
+    height: 32px;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D; }
+    .container_gif_trend .container_trend_bar p {
+      font-size: 14px;
+      color: #110038;
+      padding-top: 7px;
+      padding-left: 7px; }
+  .container_gif_trend .container_gif_sugest {
+    margin-top: 1.2%; }
+    .container_gif_trend .container_gif_sugest ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .container_gif_trend .container_gif_sugest ul li {
+        list-style: none; }
+        .container_gif_trend .container_gif_sugest ul li img {
+          height: 298px;
+          width: 288px; }
+    .container_gif_trend .container_gif_sugest .contaier_gif_sugest_first img:hover {
+      outline: 1px dotted black;
+      outline-offset: -4px; }
+    .container_gif_trend .container_gif_sugest .contaier_gif_sugest_first .container_gif_sugest_hastags {
+      display: none;
+      position: relative;
+      z-index: 1;
+      bottom: 20px; }
+    .container_gif_trend .container_gif_sugest .contaier_gif_sugest_first:hover .container_gif_sugest_hastags {
+      display: block;
+      background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6); }
+    .container_gif_trend .container_gif_sugest .container_gifs_bigger img {
+      width: 592px;
+      height: 298px; }
+
+/*# sourceMappingURL=styles.css.map */

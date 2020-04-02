@@ -1,0 +1,49 @@
+.logo_buttons{
+    margin-top: 2.4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .buttons_logo{
+        width: 30%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        button{
+            background-color: #F7C9F3;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        }
+        button:hover{
+            outline: 1px dotted black;
+            outline-offset: -4px;
+        }
+        .create_gif{
+            width: 144px;
+            height: 36px;
+            margin-right: 1.1%;
+        }
+        .choose_topic{
+            width: 131px;
+            height: 36px;
+        }
+        .list_topic{
+            width: 36px;
+            height: 36px;
+            margin-right: 1.1%;
+        }
+        a{
+            width: 76px;
+            height: 18px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 18px;
+            box-sizing: border-box;
+            span{
+                text-decoration: underline;
+            }
+        }
+        a:hover{
+            outline: 1px dotted black;
+        }
+    }
+}
