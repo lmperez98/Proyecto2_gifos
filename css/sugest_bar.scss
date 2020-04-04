@@ -47,12 +47,13 @@
         .container_imgs_sugest{
             img{
                 position: relative;
-                width: 280px;
-                height: 280px;
+                width: 285px;
+                height: 285px;
                 z-index: 0;
             }
             img:hover{
-                outline: 1px dotted black;
+                outline: 2px dotted black;
+                outline-offset: -2px;
             }
             .button_vermas_sugest{
                 position: relative;
@@ -60,6 +61,8 @@
                 bottom: 42px;
                 left: 7px;
                 background-color: #4180F6;
+                color: white;
+                font-size: 14px;
                 width: 81px;
                 height: 31px;
                 border: 1px solid #4C2F99 ;

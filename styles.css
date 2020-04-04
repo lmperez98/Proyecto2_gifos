@@ -136,17 +136,20 @@ header {
         margin-right: 3px; }
     .container_sugest .container_gif_today .container_imgs_sugest img {
       position: relative;
-      width: 280px;
-      height: 280px;
+      width: 285px;
+      height: 285px;
       z-index: 0; }
     .container_sugest .container_gif_today .container_imgs_sugest img:hover {
-      outline: 1px dotted black; }
+      outline: 2px dotted black;
+      outline-offset: -2px; }
     .container_sugest .container_gif_today .container_imgs_sugest .button_vermas_sugest {
       position: relative;
       z-index: 1;
       bottom: 42px;
       left: 7px;
       background-color: #4180F6;
+      color: white;
+      font-size: 14px;
       width: 81px;
       height: 31px;
       border: 1px solid #4C2F99;
@@ -177,19 +180,6 @@ header {
         .container_gif_trend .container_gif_sugest ul li img {
           height: 298px;
           width: 288px; }
-    .container_gif_trend .container_gif_sugest .contaier_gif_sugest_first img:hover {
-      outline: 1px dotted black;
-      outline-offset: -4px; }
-    .container_gif_trend .container_gif_sugest .contaier_gif_sugest_first .container_gif_sugest_hastags {
-      display: none;
-      position: relative;
-      z-index: 1;
-      bottom: 20px; }
-    .container_gif_trend .container_gif_sugest .contaier_gif_sugest_first:hover .container_gif_sugest_hastags {
-      display: block;
-      background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6); }
-    .container_gif_trend .container_gif_sugest .container_gifs_bigger img {
-      width: 592px;
-      height: 298px; }
-
-/*# sourceMappingURL=styles.css.map */
+        .container_gif_trend .container_gif_sugest ul li img:hover {
+          outline: 2px dotted black;
+          outline-offset: -4px; }
