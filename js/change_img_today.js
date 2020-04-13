@@ -13,4 +13,5 @@ async function fetch_today() {
         console.log("fetch failed", fatal_error)
     }
 }
+
 fetch_today()

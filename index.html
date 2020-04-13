@@ -13,128 +13,106 @@
 
 <body>
     <header>
-        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        <h1> ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+            de visitas: 12.765.803</h1>
     </header>
-    <main>
-        <section class="logo_buttons">
+    <nav>
+        <a href="index.html">
             <img src="assets/gifOF_logo.png" alt="logo_gifos">
-            <div class="buttons_logo">
-                <button class="create_gif">
-                    Crear guifos
+        </a>
+        <div>
+            <button class="boton_crear">Crear Guifos</button>
+            <div class="boton_cambiar_tema">
+                <button class="boton_tema">Elegir tema</button>
+                <button class="flecha_abajo">
+                    <img src="assets/dropdown.svg" alt="flecha_abajo">
                 </button>
-                <button class="choose_topic">
-                    Elegir tema
-                </button>
-                <button class="list_topic"><i class="fas fa-sort-down"></i></button>
-                <a href="">
-                    <span>M</span>is Guifos
-                </a>
+                <ul class="escoger_temas">
+                    <button class="boton_light">Sailor Day</button>
+                    <button class="boton_dark">Sailor Night</button>
+                </ul>
             </div>
-        </section>
+            <button class="mis_gifs">
+                <u>M</u>is Guifos
+            </button>
+        </div>
+    </nav>
+    <main>
         <section class="search_tab">
             <div class="navbar_search">
-                <p>Buscar</p>
+                <h2>buscar</h2>
+                <div class="inputbar_search">
+                    <input type="text" id="search_input" size="10%" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" autocomplete="on">
+                    <button id="boton_buscar">
+                        <img src="assets/lupa_inactive.svg" alt="lupa" class="lupa_buscar">
+                        <img src="assets/lupa.svg" alt="lupa" class="lupa">
+                        <p>Buscar</p>
+                    </button>
+                    <ul id="autocomplete_list" class="menu_buscar">
+                        <img src="assets/button close.svg" alt="boton_cerrar" id="boton_close">
+                        <li><a id="resultado1" href="javascript:void(0)">resultado 1</a></li>
+                        <li><a id="resultado2" href="javascript:void(0)">resultado 2</a></li>
+                        <li><a id="resultado3" href="javascript:void(0)">resultado 3</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="input_bar_search">
-                <input id="search_input" type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                <button><i class="fas fa-search" aria-hidden="true"></i>Buscar</button>
+            <div class="resultados_boton">
+                <button class="boton_resultado">ejemplo1</button>
+                <button class="boton_resultado">ejemplo2</button>
+                <button class="boton_resultado">ejemplo3</button>
             </div>
         </section>
         <section class="container_sugest">
-            <div class="container_today_sugest">
-                <p>Hoy te sugerimos</p>
+            <div class="titulo_sugest">
+                <h3>Hoy te sugerimos</h3>
             </div>
-            <div class="container_gif_today">
-                <ul>
-                    <li>
-                        <div class="bar_sugest">
-                            <p>#Jonathanvanness</p>
-                            <button class="button_close_sugest">
-                                <img src="assets/button3.svg" alt="boton_cerrar">
-                            </button>
-                        </div>
-                        <div class="container_imgs_sugest">
-                            <img class="img_today" src="assets/descarga.png" alt="lol">
-                            <button class="button_vermas_sugest">Ver más...</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="bar_sugest">
-                            <p>#SailorMercury</p>
-                            <button class="button_close_sugest">
-                                <img src="assets/button3.svg" alt="boton_cerrar">
-                            </button>
-                        </div>
-                        <div class="container_imgs_sugest">
-                            <img class="img_today" src="assets/descarga.png" alt="lol">
-                            <button class="button_vermas_sugest">Ver más...</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="bar_sugest">
-                            <p>#FabFive</p>
-                            <button class="button_close_sugest">
-                                <img src="assets/button3.svg" alt="boton_cerrar">
-                            </button>
-                        </div>
-                        <div class="container_imgs_sugest">
-                            <img class="img_today" src="assets/descarga.png" alt="lol">
-                            <button class="button_vermas_sugest">Ver más...</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="bar_sugest">
-                            <p>#Unicorns&Rainbows</p>
-                            <button class="button_close_sugest">
-                                <img src="assets/button3.svg" alt="boton_cerrar">
-                            </button>
-                        </div>
-                        <div class="container_imgs_sugest">
-                            <img class="img_today" src="assets/descarga.png" alt="lol">
-                            <button class="button_vermas_sugest">Ver más...</button>
-                        </div>
-                    </li>
-                </ul>
+            <div class="contenedor_sugerencia_gifs">
+                <div class="gif_sugerido">
+                    <div class="barra_numeral">
+                        <h4 id="titulo_gif">numeral</h4>
+                        <img src="assets/button close.svg" alt="close_button">
+                    </div>
+                    <img class="gif" id="pos1" src="assets/descarga.png" alt="gifo1">
+                    <button id="boton_mas">Ver más...</button>
+                </div>
+                <div class="gif_sugerido">
+                    <div class="barra_numeral">
+                        <h4 id="titulo_gif">numeral</h4>
+                        <img src="assets/button close.svg" alt="close_button">
+                    </div>
+                    <img class="gif" id="pos2" src="assets/descarga.png" alt="gifo2">
+                    <button id="boton_mas">Ver más...</button>
+                </div>
+                <div class="gif_sugerido">
+                    <div class="barra_numeral">
+                        <h4 id="titulo_gif">numeral</h4>
+                        <img src="assets/button close.svg" alt="close_button">
+                    </div>
+                    <img class="gif" id="pos3" src="assets/descarga.png" alt="gifo3">
+                    <button id="boton_mas">Ver más...</button>
+                </div>
+                <div class="gif_sugerido">
+                    <div class="barra_numeral">
+                        <h4 id="titulo_gif">numeral</h4>
+                        <img src="assets/button close.svg" alt="close_button">
+                    </div>
+                    <img class="gif" id="pos4" src="assets/descarga.png" alt="gifo4">
+                    <button id="boton_mas">Ver más...</button>
+                </div>
             </div>
         </section>
-        <section class="container_gif_trend">
-            <div class="container_trend_bar">
-                <p>Tendencias</p>
+        <section class="resultados_section">
+            <div class="inicio_section">
+                <h3 id="resultados_inicio">Resultados</h3>
             </div>
-            <div class="container_gif_sugest">
-                <ul>
-                    <li >
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li >
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li>
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                    <li >
-                        <img class="img_treng" src="assets/descarga.png" alt="lol">
-                    </li>
-                </ul>
+            <div id="results" class="results_container_gifs">
             </div>
+        </section>
+        <section id="trend_contaier" class="trend_section">
+            <div class="inicio_section">
+                <h3>Tendencias</h3>
+            </div>
+            <div id="trend_gif_container" class="trend_gifs"></div>
         </section>
     </main>
 </body>
