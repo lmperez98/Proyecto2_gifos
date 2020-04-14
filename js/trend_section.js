@@ -7,7 +7,6 @@ let fetchinfo = async (limit) => {
         );
         if (response.ok) {
             let data = await response.json()
-            console.log(data.data)
             return data.data;
         }
         return null
