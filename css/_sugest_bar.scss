@@ -1,0 +1,50 @@
+.container_sugest{
+    padding: 4.57rem 0 0 0;
+    .titulo_sugest{
+        @include intro-box;
+    }
+    .contenedor_sugerencia_gifs{
+        @include contenedor-gif;
+        .gif_sugerido{
+            @include gif-box-container;
+            position: relative;
+            .barra_numeral{
+                display: flex;
+                justify-content: space-between;
+                border: none;
+                box-shadow: none;
+                background-image: linear-gradient(270deg,#f7c9f3 0%,#4180f6 100%);
+                margin: 0.2rem 0.29rem 0rem;
+                h4{
+                    color: #ffffff;
+                    font-size: 1rem;
+                    padding: 0.2rem 0.3rem;
+                }
+            }
+            .gif{
+                margin: 0.14rem 0.29rem;
+                width: 18.5vw;
+                height: 19vw;
+                object-fit: cover;
+            }
+            button{
+                position: relative;
+                left: 0.79rem;
+                top: -3.65rem;
+                width: 5.79rem;
+                height: 2.43rem;
+                margin-bottom: -2.25rem;
+                @include button_blue;
+            }
+            button:hover{
+                @include dot-border;
+            }
+            button:hover ~ .gif{
+                @include dot-border;
+            }
+            .gif:hover ~ button{
+                @include dot-border;
+            }
+        }
+    }
+}

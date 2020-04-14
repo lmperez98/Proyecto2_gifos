@@ -1,0 +1,39 @@
+.trend_section{
+    padding: 4.57rem 0 0 0;
+    .inicio_section{
+        @include intro-box;
+    }
+    .trend_gifs{
+        margin: 1.36rem 10rem 0 7.43rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .model-gif{
+            @include gif-box-container;
+            position: relative;
+            margin: 0 0 1.14rem 0;
+            .gifo{
+                width: 19vw;
+                height: 19vw;
+                object-fit: cover;
+                &:hover{
+                    @include dot-border;
+                }
+                &:hover ~ .gifo_titulo{
+                    @include barra-numeral;
+                }
+            }
+            .gifo_titulo{
+                @include barra-numeral;
+                overflow: hidden;
+                width: 18.8vw;
+                display: none;
+            }
+            .gifo_titulo:hover{
+                display: block;
+                background-image: linear-gradient(270deg,#f7c9f3, #4180f6)
+            }
+        }
+
+    }
+}

@@ -25,7 +25,7 @@
             <div class="boton_cambiar_tema">
                 <button class="boton_tema">Elegir tema</button>
                 <button class="flecha_abajo">
-                    <img src="assets/dropdown.svg" alt="flecha_abajo">
+                    <img class="icono_flecha_abajo" src="assets/dropdown.svg" alt="flecha_abajo">
                 </button>
                 <ul class="escoger_temas">
                     <button class="boton_light">Sailor Day</button>
@@ -40,9 +40,9 @@
     <main>
         <section class="search_tab">
             <div class="navbar_search">
-                <h2>buscar</h2>
+                <h2>Buscar</h2>
                 <div class="inputbar_search">
-                    <input type="text" id="search_input" size="10%" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" autocomplete="on">
+                    <input type="text" id="search_input" class="search_bar" size="10%" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" autocomplete="on">
                     <button id="boton_buscar">
                         <img src="assets/lupa_inactive.svg" alt="lupa" class="lupa_buscar">
                         <img src="assets/lupa.svg" alt="lupa" class="lupa">
@@ -56,11 +56,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="resultados_boton">
-                <button class="boton_resultado">ejemplo1</button>
-                <button class="boton_resultado">ejemplo2</button>
-                <button class="boton_resultado">ejemplo3</button>
-            </div>
+            <div class="resultados_boton"></div>
         </section>
         <section class="container_sugest">
             <div class="titulo_sugest">
@@ -116,6 +112,7 @@
         </section>
     </main>
 </body>
+<script src="js/trend_section.js"></script>
 <script src="js/search_bar.js"></script>
 <script src="js/change_img_today.js"></script>
 <script src="js/change_img_trend.js"></script>
