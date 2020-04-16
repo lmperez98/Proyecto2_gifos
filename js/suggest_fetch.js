@@ -1,20 +1,7 @@
-let fetchsugest = async (term, limit) => {
-    try {
-        let response = await fetch(
-            `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${term}&limit=${limit}`
-        );
-        if (response.ok) {
-            let res = await response.json()
-            return res.data;
-        }
-        return null
-    } catch (error) {""
-        console.log("Fatal error", error)
-    }
-}
 
 let creargifobj = async (term, limit) => {
-    let datos = await fetchsugest(term, limit);
+    let url =`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${term}&limit=${limit}`
+    let datos = await fetchAny(url);
     if (datos == null) {
         alert("Fatal error en el fetch papi")
         return "assets/descarga.png"

@@ -1,22 +1,7 @@
-let API_KEY = "uQN81XZ1Dt44mlcLeDhKbjAG4UMv6szw"
-
-let fetchinfo = async (limit) => {
-    try {
-        let response = await fetch(
-            `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&rating=R`
-        );
-        if (response.ok) {
-            let data = await response.json()
-            return data.data;
-        }
-        return null
-    } catch (error) {
-        console.log("Fatal error", error)
-    }
-}
 
 let crearcajitagifs = async (limit) => {
-    let datos = await fetchinfo(limit);
+    let url = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&rating=R`
+    let datos = await fetchAny(url);
     if (datos == null) {
         console.log("Fatal error en el el fetch papi")
         return "assets/descarga.png"

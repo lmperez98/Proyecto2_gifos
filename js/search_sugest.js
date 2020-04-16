@@ -1,20 +1,7 @@
-let fetchsugestsearch = async (term) => {
-    try {
-        let response = await fetch(
-            `https://api.giphy.com/v1/gifs/search/tags?api_key=${API_KEY}&q=${term}&limit=3`
-        );
-        if (response.ok) {
-            let res = await response.json()
-            return res.data;
-        }
-        return null
-    } catch (error) {
-        console.log("Fatal error", error)
-    }
-}
 
 let resultarray = async (term) => {
-    let datos = await fetchsugestsearch(term)
+    let url = `https://api.giphy.com/v1/gifs/search/tags?api_key=${API_KEY}&q=${term}&limit=3`
+    let datos = await fetchAny(url)
     if (datos == null) {
         console.log("Fatal error en el fetch")
         return "assets/descarga.png"
@@ -42,83 +29,6 @@ inputfield.oninput = () => {
     let term = document.getElementById("search_input").value
     loadresults(term)
 }
-let searcharray = []
-let loadrecentsearch = () => {
-    let buttonbox = document.getElementById("resultados_boton")
-    buttonbox.style.display = "block"
-    let recentserch = JSON.parse(sessionStorage.getItem("searcharray"))
-    if (recentserch == "") {
-        buttonbox.style.display = "none"
-    } else {
-        buttonbox.innerHTML = ""
-        recentserch.forEach((element) => {
-            let botonrecent = document.createElement("button")
-            botonrecent.setAttribute("class", "result-button")
-            botonrecent.innerHTML = "#" + element
-            buttonbox.appendChild(botonrecent)
-            botonrecent.onclick = () => {
-                changegifsyname(element)
-                let resultsection = document.getElementById("resultados_section")
-                resultsection.style.display = "block";
-                resultsection.scrollIntoView();
-            }
-        })
-    }
-}
-
-let buscarterm = async (term) => {
-    console.log(fetchsugest(term,"0"))
-    return await fetchsugest(term, "0")
-}
-
-let createarrayobj = async (term) => {
-    let info = await buscarterm(term)
-    console.log(info)
-    if (info == null) {
-        console.log("Fatal error papi revisa tu fetch")
-        return "assets/descarga.png"
-    } else {
-        let infoarray = []
-        info.forEach(element => {
-            let infobj = new Object()
-            infobj.name = element.title;
-            infobj.url = element.images.fixed_height.url;
-            infoarray.push(infobj)
-        });
-        return infoarray
-    }
-}
-
-let changegifsyname = async (term) => {
-    const resultbox = document.getElementById("results")
-    let arreglo = await createarrayobj(term)
-    if (arreglo.length === 0) {
-        document.getElementById("resultados_inicio").innerHTML = "Not found gifs"
-        document.getElementById("results").innerHTML = ""
-    } else {
-        document.getElementById("results").innerHTML = ""
-        document.getElementById("resultados_inicio").innerHTML = term
-        document.getElementById("search_input").value = ""
-        arreglo.forEach((element, index) => {
-            const divgifs = document.createElement("div");
-            divgifs.setAttribute("class", "model-gif")
-            const gif = document.createElement("img")
-            gif.setAttribute("src", arreglo[index].url)
-            gif.setAttribute("alt", arreglo[index].name)
-            gif.setAttribute("class", "gifo")
-            const titulodiv = document.createElement("div")
-            titulodiv.setAttribute("class", "gifo_titulo")
-            const nombregif = document.createElement("p")
-            nombregif.innerHTML = arreglo[index].name
-            nombregif.setAttribute("class", "gif-texto")
-            divgifs.appendChild(gif)
-            divgifs.appendChild(titulodiv)
-            titulodiv.appendChild(nombregif)
-            resultbox.appendChild(divgifs)
-        });
-
-    }
-}
 
 document.getElementById("search_input").onkeydown = () => {
     let onSearch = document.getElementById("autocomplete_list");
@@ -131,24 +41,74 @@ document.getElementById("boton_close").onclick = () => {
     onSearch.style.display = "none"
 }
 
-
-document.getElementById("boton_buscar").onclick = buscargifs = () => {
-    let searchterm = document.getElementById("search_input").value
-    changegifsyname(searchterm)
-    searcharray.unshift(searchterm)
-    sessionStorage.setItem("searcharray", JSON.stringify(searcharray))
-    let resultsection = document.getElementById("resultados_section")
-    resultsection.style.display = "block"
-    resultsection.scrollIntoView()
-    let onsearch = document.getElementById("autocomplete_list")
-    onsearch.style.display = "none"
-    loadrecentsearch();
-    searchterm = ""
-    document.getElementById("search_input").innerHTML = ""
-}
-
 document.getElementById("search_input").onkeyup = (event) => {
     if (event.keyCode === 13) {
         buscargifs()
+    } else if (event.keyCode === 27) {
+        document.getElementById("search_input").value = "";
+        document.getElementById("autocomplete_list").style.display = "none"
     }
 }
+
+idbuttonssearch.forEach((element) => {
+    let sugest = document.getElementById(element)
+    let inputvalue = document.getElementById("search_input")
+    let list = document.getElementById("autocomplete_list")
+    sugest.onclick = () => {
+        inputvalue.value = sugest.innerHTML
+        list.style.display = "none"
+    }
+})
+
+let createGifSearch = async (term, limit) => {
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${term}&limit=${limit}`
+    let datos = await fetchAny(url);
+    console.log(datos)
+    if (datos == null) {
+        alert("Fatal error en el fetch papi")
+        return "assets/descarga.png"
+    } else {
+        let infogif = []
+        datos.forEach(element => {
+            let objGif = new Object()
+            objGif.titulo = element.title
+            objGif.url = element.images.fixed_height.url
+            infogif.push(objGif)
+        })
+        return infogif
+    }
+}
+
+let insertGifsSearch = async (term, limit) => {
+    let array = await createGifSearch(term, limit)
+    let boxGifsImg = document.getElementsByClassName("gifo")
+    let boxGifsname = document.getElementsByClassName("gif-texto")
+    let boxterm = document.getElementById("result_title")
+    boxterm.innerHTML = term + " (resultados)"
+    array.forEach((element, index) => {
+        boxGifsImg[index].setAttribute("src", array[index].url)
+        boxGifsname[index].innerHTML = array[index].titulo
+    })
+}
+
+document.getElementById("boton_buscar").onclick = () => {
+    let inputfield = document.getElementById("search_input")
+    if (inputfield.value == "") {
+        alert("Escribe algo, lo siento")
+    } else {
+        insertGifsSearch(inputfield.value, "0")
+        document.getElementById("trend_contaier").scrollIntoView()
+    }
+}
+
+let sugestButtons = document.getElementsByClassName("boton_mas")
+
+Array.prototype.forEach.call(sugestButtons,((element, index) => {
+    element.onclick = () => {
+        insertGifsSearch(termsshuffle[index], "0")
+        document.getElementById("trend_contaier").scrollIntoView()
+    }
+}))
+
+
+
