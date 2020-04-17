@@ -43,7 +43,10 @@ document.getElementById("boton_close").onclick = () => {
 
 document.getElementById("search_input").onkeyup = (event) => {
     if (event.keyCode === 13) {
-        buscargifs()
+        insertGifsSearch(document.getElementById("search_input").value, "0")
+        document.getElementById("trend_contaier").scrollIntoView()
+        document.getElementById("search_input").value = "";
+        document.getElementById("autocomplete_list").style.display = "none"
     } else if (event.keyCode === 27) {
         document.getElementById("search_input").value = "";
         document.getElementById("autocomplete_list").style.display = "none"
