@@ -24,6 +24,18 @@ let loadresults = async (term) => {
     });
 }
 
+let createButtonSugest = async (term) => {
+    let infoCatch = await resultarray(term)
+    console.log(infoCatch)
+    let divcontainer = document.getElementById("resultados_boton")
+    divcontainer.style.display = "block"
+    let buttonsbox = document.querySelectorAll(".result-boton")
+    console.log(buttonsbox)
+    buttonsbox.forEach((element,index) => {
+        element.innerHTML= infoCatch[index]
+    })
+}
+
 let inputfield = document.getElementById("search_input")
 inputfield.oninput = () => {
     let term = document.getElementById("search_input").value
@@ -66,7 +78,6 @@ idbuttonssearch.forEach((element) => {
 let createGifSearch = async (term, limit) => {
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${term}&limit=${limit}`
     let datos = await fetchAny(url);
-    console.log(datos)
     if (datos == null) {
         alert("Fatal error en el fetch papi")
         return "assets/descarga.png"
@@ -100,16 +111,24 @@ document.getElementById("boton_buscar").onclick = () => {
         alert("Escribe algo, lo siento")
     } else {
         insertGifsSearch(inputfield.value, "0")
-        document.getElementById("trend_contaier").scrollIntoView()
+        console.log(inputfield.value)
+        createButtonSugest(inputfield.value)
     }
 }
 
 let sugestButtons = document.getElementsByClassName("boton_mas")
 
-Array.prototype.forEach.call(sugestButtons,((element, index) => {
+Array.prototype.forEach.call(sugestButtons, ((element, index) => {
     element.onclick = () => {
         insertGifsSearch(termsshuffle[index], "0")
-        document.getElementById("trend_contaier").scrollIntoView()
+    }
+}))
+
+let sugestButtonsHastag=document.getElementsByClassName("result-boton")
+
+Array.prototype.forEach.call(sugestButtonsHastag , ((element, index) => {
+    element.onclick = () => {
+        insertGifsSearch(element.innerHTML, "0")
     }
 }))
 

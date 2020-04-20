@@ -13,14 +13,14 @@ nav{
             padding: 0.64rem 1.89rem;
             margin: 0.57rem;
             font-size: 1.14rem;
-            color:#110038;
+            color:#FFFFFF;
             line-height: 1.19rem;
             position: relative;
         }
         .boton_crear{
             margin-right: 1.14rem;
             &:active{
-                background: #daafd7;
+                background: #110038;
             }
         }
         .boton_crear:hover{
@@ -39,7 +39,7 @@ nav{
                 margin: 0.57rem 0;
                 padding: 0.93rem 1.07rem;
                 &:active{
-                    background:#daafd7;
+                    background:#110038;
                 }
             }
             .flecha_abajo{
@@ -48,9 +48,10 @@ nav{
                 margin: 0.57rem 0;
                 padding: 0.93rem 1.07rem;
                 &:active{
-                    background:#daafd7;
+                    background:#110038 ;
                 }
                 .icono_flecha_abajo{
+                    color: #ffffff;
                     margin: 0;
                     padding: 0;
                     height: auto;
@@ -60,25 +61,30 @@ nav{
                 display: none;
                 position: absolute;
                 top: 3.7rem;
-                background: #e6e6e6;
-                box-shadow: inset -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+                background: #B4B4B4;
+                box-shadow: inset -0.14rem -0.14rem 0 0 #8F8F8F, inset 0.14rem 0.14rem 0 0 #ffffff;
                 z-index: 1;
                 padding-bottom: 0.71;
                 button{
                     width: 86.5%;
                     padding: 0.5rem 1.14rem;
-                    background: #f0f0f0;
+                    color:#110038 ;
+                    background: #CCCCCC;
                     border: 0.07rem solid #808080;
                     box-shadow: inset -0.07rem -0.07rem 0 0 #b4b4b4, inset 0.07rem 0.07rem 0 0 #ffffff;
                     font-size: 1.14rem;
                     text-align: left;
                 }
-                .boton_light{
-                    background: #fff4fd;
-                    border: 0.07rem solid #cca6c9;
-                    box-shadow: inset -0.07rem -0.07rem 0 0 #e6dce4, inset 0.07rem 0.07rem 0 0 #ffffff;
+                button:hover{
+                    @include dot-border
                 }
-                .boton_light::first-letter{
+                .boton_dark{
+                    background: #2E32FB;
+                    color: #FFFFFF;
+                    border: 0.07rem solid #33358F ;
+                    box-shadow: inset -0.07rem -0.07rem 0 0 #E6DCE4, inset 0.07rem 0.07rem 0 0 #ffffff;
+                }
+                .boton_dark::first-letter{
                     text-decoration: underline;
                 }
             }
@@ -89,7 +95,11 @@ nav{
         padding: 0 0.8rem;
         margin: 0.4rem 0;
         border: none;
-        box-shadow: none;
+        box-shadow: none; 
+    }
+    .mis_gifs:hover{
+        outline: 0.21rem dotted white;
+        outline-offset: -0.5rem; 
     }
     .mis_gifs:focus{
         color: #9674e6;

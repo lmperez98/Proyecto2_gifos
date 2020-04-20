@@ -7,7 +7,7 @@
     <meta name="author" content="Diego Cabulo">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b5c2e18c71.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link id="style_change" rel="stylesheet" href="styles.css">
     <title>Gifos_DC</title>
 </head>
 
@@ -18,18 +18,18 @@
     </header>
     <nav>
         <a href="index.html">
-            <img src="assets/gifOF_logo.png" alt="logo_gifos">
+            <img id="logo_img" src="assets/gifOF_logo.png" alt="logo_gifos">
         </a>
         <div>
             <button class="boton_crear">Crear Guifos</button>
             <div class="boton_cambiar_tema">
-                <button class="boton_tema">Elegir tema</button>
-                <button class="flecha_abajo">
+                <button id="boton_tema" class="boton_tema">Elegir tema</button>
+                <button id="flecha_abajo" class="flecha_abajo">
                     <img class="icono_flecha_abajo" src="assets/dropdown.svg" alt="flecha_abajo">
                 </button>
-                <ul class="escoger_temas">
-                    <button class="boton_light">Sailor Day</button>
-                    <button class="boton_dark">Sailor Night</button>
+                <ul id="escoger_temas" class="escoger_temas">
+                    <button id="boton_light" class="boton_light">Sailor Day</button>
+                    <button id="boton_dark" class="boton_dark">Sailor Night</button>
                 </ul>
             </div>
             <button class="mis_gifs">
@@ -56,7 +56,11 @@
                     </ul>
                 </div>
             </div>
-            <div id="resultados_boton" class="resultados_boton"></div>
+            <div id="resultados_boton" class="resultados_boton">
+                <button class="result-boton"></button>
+                <button class="result-boton"></button>
+                <button class="result-boton"></button>
+            </div>
         </section>
         <section class="container_sugest">
             <div class="titulo_sugest">
@@ -107,6 +111,7 @@
 </body>
 <script src="js/fetch.js"></script>
 <script src="js/trend_section.js"></script>
-<script src="js/suggest_section.js.js"></script>
+<script src="js/suggest_section.js"></script>
 <script src="js/search_sugest.js"></script>
+<script src="js/change_theme.js"></script>
 </html>
