@@ -31,8 +31,8 @@ let createButtonSugest = async (term) => {
     divcontainer.style.display = "block"
     let buttonsbox = document.querySelectorAll(".result-boton")
     console.log(buttonsbox)
-    buttonsbox.forEach((element,index) => {
-        element.innerHTML= infoCatch[index]
+    buttonsbox.forEach((element, index) => {
+        element.innerHTML = infoCatch[index]
     })
 }
 
@@ -113,6 +113,7 @@ document.getElementById("boton_buscar").onclick = () => {
         insertGifsSearch(inputfield.value, "0")
         console.log(inputfield.value)
         createButtonSugest(inputfield.value)
+        document.getElementsByClassName("container_sugest")[0].style.display = "none"
     }
 }
 
@@ -124,9 +125,9 @@ Array.prototype.forEach.call(sugestButtons, ((element, index) => {
     }
 }))
 
-let sugestButtonsHastag=document.getElementsByClassName("result-boton")
+let sugestButtonsHastag = document.getElementsByClassName("result-boton")
 
-Array.prototype.forEach.call(sugestButtonsHastag , ((element, index) => {
+Array.prototype.forEach.call(sugestButtonsHastag, ((element, index) => {
     element.onclick = () => {
         insertGifsSearch(element.innerHTML, "0")
     }

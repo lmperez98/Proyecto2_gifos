@@ -42,7 +42,8 @@
             <div class="navbar_search">
                 <h2>Buscar</h2>
                 <div class="inputbar_search">
-                    <input type="text" id="search_input" class="search_bar" size="10%" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" autocomplete="on">
+                    <input type="text" id="search_input" class="search_bar" size="10%"
+                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" autocomplete="on">
                     <button id="boton_buscar">
                         <img src="assets/lupa_inactive.svg" alt="lupa" class="lupa_buscar">
                         <img src="assets/lupa.svg" alt="lupa" class="lupa">
@@ -107,6 +108,111 @@
             </div>
             <div id="trend_gif_container" class="trend_gifs"></div>
         </section>
+        <section class="create_gifs_box">
+            <div class="window_scene1" id="stage1">
+                <div class="title_creategifs">
+                    <p>Crear Guifos</p>
+                </div>
+                <div class="creategifs_steps">
+                    <img src="assets/window img.png" alt="icono_ventana">
+                    <div class="gifs_step">
+                        <p>Aquí podrás crear tus propios guifos</p>
+                        <p>Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                            personalizados. Los pasos para crear tu guifo son:
+                        </p>
+                        <ol class="list_steps">
+                            <li>Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
+                            <li>Capturar tu momento guifo</li>
+                            <li>Revisar el momento</li>
+                            <li>Listo para subir y compartir!</li>
+                        </ol>
+                        <p>¿Quieres comenzar a crear tu <span>guifo</span> ahora?</p>
+                    </div>
+                    <div class="create_buttons">
+                        <button id="cancel_button">Cancelar</button>
+                        <button id="begin_button">Comenzar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="window_scene2" id="stage2">
+                <div class="title_stage2">
+                    <h3>Un Chequeo Antes de Empezar</h3>
+                    <button><img src="assets/button close.svg" alt=""></button>
+                </div>
+                <div class="video_box">
+                    <video class="video_elemet"></video>
+                    <div>
+                        <button>
+                            <img src="assets/camera.svg" alt="camera_icon">
+                            <span>Capturar</span>
+                        </button>
+                    </div>
+                    <div class="window_capture_upload" id="stage3">
+                        <div class="timer&uploadbarbox">
+                            <div class="timerbox"></div>
+                            <div class="loadbar">
+                                <button>&#9654;</button>
+                                <div class="loadbarbox"></div>
+                            </div>
+                        </div>
+                        <button>Listo</button>
+                        <div class="repeat/uploadgif" id="stage4">
+                            <button>Repetir Captura</button>
+                            <button>Subir Guifo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window_scene5" id="stage5">
+                <div class="title_stage5">
+                    <h3>Subiendo Guifo</h3>
+                    <button><img src="assets/button close.svg" alt=""></button>
+                </div>
+                <div class="uploadboxgifs">
+                    <img src="assets/globe_img.png" alt="globo_mundo">
+                    <p>Estamos subiendo tu guifo</p>
+                    <div class="loadbar_upload"></div>
+                    <p>Tiempo restante: <span>38 años</span> algunos minutos</p>
+                </div>
+            </div>
+            <div class="window_scene6" id="stage6">
+                <div class="title_stage6">
+                    <h3>Guifo Subido con Éxito</h3>
+                    <button><img src="assets/button close.svg" alt=""></button>
+                </div>
+                <div class="gifuploadbox">
+                    <div class="gifspreview">
+                        <img src="assets/descarga.png" alt="gif_grabado">
+                        <div>
+                            <p>Guifo creado</p>
+                            <button>Copiar Enlace Guifo</button>
+                            <button>Descargar Guifo</button>
+                        </div>
+                    </div>
+                    <button>Listo</button>
+                </div>
+            </div>
+            <div class="window_error_upload" id="error_upload">
+                <div class="title_stage6">
+                    <h3>Fatal error</h3>
+                    <button><img src="assets/button close.svg" alt=""></button>
+                </div>
+                <div>
+                    <img src="assets/ops.jpg" alt="eror-img">
+                    <p>Tu gifo no pudo ser creado</p>
+                    <div>
+                        <button>Reintentar</button>
+                        <button>Listo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="my_gifs" class="mis_gis">
+            <div class="inicio_section">
+                <h3 id="result_title">Mis guifos</h3>
+            </div>
+            <div id="mygifs_container" class="misgifs"></div>
+        </section>
     </main>
 </body>
 <script src="js/fetch.js"></script>
@@ -114,4 +220,5 @@
 <script src="js/suggest_section.js"></script>
 <script src="js/search_sugest.js"></script>
 <script src="js/change_theme.js"></script>
+
 </html>
