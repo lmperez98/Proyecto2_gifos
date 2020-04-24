@@ -25,6 +25,7 @@ nav{
         }
         .boton_crear:hover{
             @include dot-border;
+            background-color: #E6BBE2 ;
         }
         button:hover{
             @include dot-border;
@@ -42,6 +43,10 @@ nav{
                     background:#daafd7;
                 }
             }
+            .boton_tema:hover{
+                @include dot-border;
+                background-color: #E6BBE2 ;
+            }
             .flecha_abajo{
                 @include button;
                 position: relative;
@@ -55,6 +60,10 @@ nav{
                     padding: 0;
                     height: auto;
                 }
+            }
+            .flecha_abajo:hover{
+                @include dot-border;
+                background-color: #E6BBE2;
             }
             .escoger_temas{
                 display: none;

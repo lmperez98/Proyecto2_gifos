@@ -26,11 +26,9 @@ let loadresults = async (term) => {
 
 let createButtonSugest = async (term) => {
     let infoCatch = await resultarray(term)
-    console.log(infoCatch)
     let divcontainer = document.getElementById("resultados_boton")
     divcontainer.style.display = "block"
     let buttonsbox = document.querySelectorAll(".result-boton")
-    console.log(buttonsbox)
     buttonsbox.forEach((element, index) => {
         element.innerHTML = infoCatch[index]
     })
@@ -56,9 +54,10 @@ document.getElementById("boton_close").onclick = () => {
 document.getElementById("search_input").onkeyup = (event) => {
     if (event.keyCode === 13) {
         insertGifsSearch(document.getElementById("search_input").value, "0")
-        document.getElementById("trend_contaier").scrollIntoView()
+        createButtonSugest(document.getElementById("search_input").value)
         document.getElementById("search_input").value = "";
         document.getElementById("autocomplete_list").style.display = "none"
+        document.getElementsByClassName("container_sugest")[0].style.display = "none"
     } else if (event.keyCode === 27) {
         document.getElementById("search_input").value = "";
         document.getElementById("autocomplete_list").style.display = "none"
@@ -111,7 +110,6 @@ document.getElementById("boton_buscar").onclick = () => {
         alert("Escribe algo, lo siento")
     } else {
         insertGifsSearch(inputfield.value, "0")
-        console.log(inputfield.value)
         createButtonSugest(inputfield.value)
         document.getElementsByClassName("container_sugest")[0].style.display = "none"
     }
