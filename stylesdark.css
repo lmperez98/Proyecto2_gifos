@@ -302,10 +302,6 @@ nav {
         outline: 0.21rem dotted black;
         outline-offset: -0.5rem; }
 
-.resultados_section {
-  display: none;
-  padding-top: 5rem; }
-
 .trend_section {
   padding: 4.57rem 0 0 0; }
   .trend_section .inicio_section {
@@ -376,5 +372,440 @@ nav {
       .trend_section .trend_gifs .model-gif .gifo_titulo:hover {
         display: block;
         background-image: linear-gradient(270deg, #f7c9f3, #4180f6); }
+
+.create_gifs_box {
+  margin-bottom: 4.57rem;
+  display: none; }
+  .create_gifs_box .window_scene1 {
+    margin: 5.42rem auto 10.85rem auto;
+    background-color: #e6e6e6;
+    box-shadow: inset -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+    max-width: 700px; }
+    .create_gifs_box .window_scene1 .title_creategifs {
+      background-image: linear-gradient(90deg, #4180F6 0%, #F7C9F3 100%);
+      padding: 0.42rem; }
+      .create_gifs_box .window_scene1 .title_creategifs p {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold; }
+    .create_gifs_box .window_scene1 .creategifs_steps {
+      padding: 2.28rem; }
+      .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content {
+        display: flex; }
+        .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content img {
+          margin-right: 1.14rem;
+          height: max-content; }
+        .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step {
+          margin-bottom: 2rem; }
+          .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .creategifs_p1 {
+            font-size: 1.14rem;
+            font-weight: bold; }
+          .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .creategifs_p2 {
+            margin: 0.5rem 0;
+            font-size: 1rem; }
+            .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .creategifs_p2 span {
+              font-style: italic;
+              font-weight: bold;
+              font-size: 1rem; }
+          .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .list_steps {
+            font-size: 1rem;
+            counter-reset: list;
+            list-style: none; }
+            .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .list_steps li::before {
+              content: counter(list,decimal) ") ";
+              font-weight: bold;
+              counter-increment: list; }
+            .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .list_steps li {
+              margin-bottom: 0.5rem; }
+          .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .creategifs_p3 {
+            font-size: 1rem; }
+            .create_gifs_box .window_scene1 .creategifs_steps .creategifs_content .gifs_step .creategifs_p3 span {
+              font-style: italic;
+              font-size: 1rem;
+              font-weight: bold; }
+      .create_gifs_box .window_scene1 .creategifs_steps .create_buttons {
+        display: flex;
+        justify-content: flex-end; }
+        .create_gifs_box .window_scene1 .creategifs_steps .create_buttons button {
+          height: 2.57rem;
+          width: 10.28rem;
+          font-size: 1.14rem;
+          color: #110038;
+          border: 0.07rem solid #110038;
+          box-shadow: inset -0.07rem -0.07rem 0 0 #997d97, inset 0.07rem 0.07rem 0 0 #ffffff;
+          padding: 0.14rem; }
+        .create_gifs_box .window_scene1 .creategifs_steps .create_buttons .cancel_button {
+          margin-right: 1.14rem;
+          background-color: #fff4fd; }
+        .create_gifs_box .window_scene1 .creategifs_steps .create_buttons .begin_button {
+          background-color: #F7C9F3; }
+        .create_gifs_box .window_scene1 .creategifs_steps .create_buttons button:hover {
+          outline: 0.21rem dotted black;
+          outline-offset: -0.5rem; }
+  .create_gifs_box .window_scene2 {
+    background-color: #e6e6e6;
+    box-shadow: inset -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+    margin: 5.42rem auto 10.85rem auto;
+    max-width: 860px;
+    padding: 2px; }
+    .create_gifs_box .window_scene2 .title_stage2 {
+      background-image: linear-gradient(90deg, #4180F6 0%, #F7C9F3 100%);
+      padding: 0.42rem;
+      position: relative; }
+      .create_gifs_box .window_scene2 .title_stage2 h3 {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold; }
+      .create_gifs_box .window_scene2 .title_stage2 button {
+        width: 1.14rem;
+        height: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 1;
+        border: none; }
+    .create_gifs_box .window_scene2 .video_box {
+      margin: 1rem; }
+      .create_gifs_box .window_scene2 .video_box video {
+        background-color: black;
+        border: 0.07rem solid #979797;
+        box-shadow: inset -0.14rem -0.14rem 0 0 #e6e6e6, inset 0.14rem 0.14rem 0 0 black;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.42rem; }
+      .create_gifs_box .window_scene2 .video_box .capture_gifs {
+        display: flex;
+        justify-content: flex-end; }
+        .create_gifs_box .window_scene2 .video_box .capture_gifs button {
+          display: flex;
+          justify-content: space-between;
+          color: #110038;
+          background-color: #F7C9F3;
+          border: 0.07rem solid #110038;
+          padding: 2px;
+          width: 11.25rem;
+          height: 2.7rem; }
+          .create_gifs_box .window_scene2 .video_box .capture_gifs button img {
+            height: 1.3rem;
+            width: 1.3rem;
+            outline: 0.07rem solid black;
+            outline-offset: 0.7rem;
+            margin-left: 7.5px;
+            margin-top: 1px; }
+          .create_gifs_box .window_scene2 .video_box .capture_gifs button span {
+            font-size: 1.14rem;
+            padding-right: 1.75rem; }
+        .create_gifs_box .window_scene2 .video_box .capture_gifs button:hover {
+          outline: 0.21rem dotted black;
+          outline-offset: -0.5rem;
+          background-color: #E6BBE2; }
+      .create_gifs_box .window_scene2 .video_box .window_capture_upload {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center; }
+        .create_gifs_box .window_scene2 .video_box .window_capture_upload .timer_uploadbarbox {
+          display: flex;
+          flex-flow: row wrap;
+          width: auto; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .timer_uploadbarbox .timerbox {
+            background-color: #ffffff;
+            border: 0.07rem solid #979797;
+            box-shadow: inset -0.14rem -0.14rem 0 0 #e6e6e6, inset 0.14rem 0.14rem 0 0 black;
+            color: #110038;
+            margin-bottom: 0;
+            margin-right: 1.14rem;
+            width: 5.9rem;
+            padding: 0.57rem 0.92rem 0.57rem 1.14rem;
+            font-size: 1rem; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .timer_uploadbarbox .loadbar {
+            display: flex;
+            align-items: center; }
+            .create_gifs_box .window_scene2 .video_box .window_capture_upload .timer_uploadbarbox .loadbar button {
+              color: #110038;
+              background: #F7C9F3;
+              border: 0.07rem solid #110038;
+              box-shadow: inset -0.07rem -0.07rem 0 0 #997d97, inset 0.07rem 0.07rem 0 0 #ffffff;
+              margin-right: 0.43rem;
+              padding: 0.14rem;
+              width: 1.64rem;
+              height: 2.21rem; }
+            .create_gifs_box .window_scene2 .video_box .window_capture_upload .timer_uploadbarbox .loadbar .loadbarbox {
+              background: #b4b4b4;
+              box-shadow: -0.14rem -0.14rem 0 0 #ffffff, inset 0.14rem 0.14rem 0 0 black;
+              display: flex;
+              width: 16.86rem;
+              height: 1.71rem;
+              padding: 2px; }
+              .create_gifs_box .window_scene2 .video_box .window_capture_upload .timer_uploadbarbox .loadbar .loadbarbox span {
+                background-color: #979797;
+                display: block;
+                height: 100%;
+                flex: 1 1 auto;
+                margin-right: 2px; }
+        .create_gifs_box .window_scene2 .video_box .window_capture_upload .button_ready {
+          background-color: #ff6161;
+          border: 0.07rem solid #110038;
+          box-shadow: -0.07rem -0.07rem 0 0 #993a3a, inset 0.07rem 0.07rem 0 0 white;
+          color: #ffffff;
+          padding: 2px;
+          display: flex;
+          justify-content: space-between;
+          width: 9.28rem;
+          height: 2.5rem; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .button_ready img {
+            outline: 0.07rem solid black;
+            outline-offset: 0.45rem;
+            margin-left: 3px; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .button_ready span {
+            font-size: 1.14rem;
+            padding-right: 2rem; }
+        .create_gifs_box .window_scene2 .video_box .window_capture_upload .button_ready:hover {
+          outline: 0.21rem dotted black;
+          outline-offset: -0.5rem; }
+        .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif {
+          display: block; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif button {
+            color: #110038;
+            border: 0.07rem solid black;
+            box-shadow: -0.07rem -0.07rem 0 0 #997d97, inset 0.07rem 0.07rem 0 0 white;
+            padding: 2px;
+            font-size: 1.14rem; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif .repeat_gif {
+            margin-right: 1.71rem;
+            background: #fff4fd;
+            width: 12.25rem;
+            height: 2.5rem; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif .upload_gif {
+            background: #F7C9F3;
+            width: 9.75rem;
+            height: 2.5rem; }
+          .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif button:hover {
+            outline: 0.21rem dotted black;
+            outline-offset: -0.5rem; }
+  .create_gifs_box .window_scene5 {
+    background: #e6e6e6;
+    box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+    margin: 5.42rem auto 10.85rem auto;
+    max-width: 860px;
+    padding: 2px; }
+    .create_gifs_box .window_scene5 .title_stage5 {
+      background-image: linear-gradient(90deg, #4180F6 0%, #F7C9F3 100%);
+      padding: 0.42rem;
+      position: relative; }
+      .create_gifs_box .window_scene5 .title_stage5 h3 {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold; }
+      .create_gifs_box .window_scene5 .title_stage5 button {
+        width: 1.14rem;
+        height: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 1;
+        border: none; }
+    .create_gifs_box .window_scene5 .uploadboxgifs {
+      margin: 1rem;
+      background: #ffffff;
+      box-shadow: -0.14rem -0.14rem 0 0 #e6e6e6, inset 0.14rem 0.14rem 0 0 #000000;
+      display: flex;
+      align-items: center;
+      flex-flow: column nowrap;
+      padding: 10rem 0; }
+      .create_gifs_box .window_scene5 .uploadboxgifs img {
+        margin-bottom: 0.571rem;
+        max-width: 100%;
+        display: block; }
+      .create_gifs_box .window_scene5 .uploadboxgifs .upload_text {
+        margin-bottom: 2.28rem;
+        font-size: 1.14rem;
+        font-weight: bold;
+        color: #110038; }
+      .create_gifs_box .window_scene5 .uploadboxgifs .loadbar_upload {
+        display: flex;
+        width: 22.85rem;
+        margin-bottom: 1rem;
+        background: #b4b4b4;
+        box-shadow: -0.14rem -0.14rem 0 0 #fffcfc, inset 0.14rem 0.14rem 0 0 #000000;
+        height: 1.7rem;
+        padding: 2px; }
+        .create_gifs_box .window_scene5 .uploadboxgifs .loadbar_upload span {
+          background: #979797;
+          display: block;
+          height: 100%;
+          flex: 1 1 auto;
+          margin-right: 2px; }
+      .create_gifs_box .window_scene5 .uploadboxgifs .time_text span {
+        text-decoration: line-through; }
+    .create_gifs_box .window_scene5 .cancel_button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.5rem;
+      margin-bottom: 1.14rem;
+      margin-right: 1rem; }
+      .create_gifs_box .window_scene5 .cancel_button button {
+        width: 10.28rem;
+        height: 2.57rem;
+        font-size: 1.14rem;
+        color: #110038;
+        background-color: #FFF4FD;
+        border: 0.07rem solid #110038;
+        box-shadow: -0.07rem -0.07rem 0 0 #997D97, inset 0.07rem 0.07rem 0 0 white; }
+      .create_gifs_box .window_scene5 .cancel_button button:hover {
+        outline: 0.21rem dotted black;
+        outline-offset: -0.5rem; }
+  .create_gifs_box .window_scene6 {
+    background: #e6e6e6;
+    box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+    margin: 5.42rem auto 10.85rem auto;
+    max-width: 700px;
+    padding: 2px; }
+    .create_gifs_box .window_scene6 .title_stage6 {
+      background-image: linear-gradient(90deg, #4180F6 0%, #F7C9F3 100%);
+      padding: 0.42rem;
+      position: relative; }
+      .create_gifs_box .window_scene6 .title_stage6 h3 {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold; }
+      .create_gifs_box .window_scene6 .title_stage6 button {
+        width: 1.14rem;
+        height: 1rem;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        z-index: 1;
+        border: none; }
+    .create_gifs_box .window_scene6 .gifuploadbox {
+      margin: 2rem; }
+      .create_gifs_box .window_scene6 .gifuploadbox .gifspreview {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start; }
+        .create_gifs_box .window_scene6 .gifuploadbox .gifspreview img {
+          width: 25rem;
+          margin-bottom: 1.42rem;
+          border: 0.07rem solid #979797; }
+        .create_gifs_box .window_scene6 .gifuploadbox .gifspreview div {
+          padding-left: 1.71rem; }
+          .create_gifs_box .window_scene6 .gifuploadbox .gifspreview div p {
+            font-size: 1.14rem;
+            font-weight: bold;
+            color: #110038;
+            margin-bottom: 1.14rem; }
+          .create_gifs_box .window_scene6 .gifuploadbox .gifspreview div button {
+            margin-bottom: 1rem;
+            background: #FFF4FD;
+            color: #110038;
+            border: 0.07rem solid #110038;
+            box-shadow: -0.07rem -0.07rem 0 0 #997D97, inset 0.07rem 0.07rem 0 0 white;
+            width: 100%;
+            font-size: 16px;
+            height: 2.5rem; }
+          .create_gifs_box .window_scene6 .gifuploadbox .gifspreview div button:hover {
+            outline: 0.21rem dotted black;
+            outline-offset: -0.5rem; }
+      .create_gifs_box .window_scene6 .gifuploadbox .button_finish {
+        display: flex;
+        justify-content: flex-end; }
+        .create_gifs_box .window_scene6 .gifuploadbox .button_finish button {
+          color: #110038;
+          background: #F7C9F3;
+          box-shadow: -1px -1px 0 0 #997D97, inset 1px 1px 0 0 white;
+          padding: 2px;
+          width: 6.5rem;
+          height: 2.7rem;
+          font-size: 1.14rem;
+          border: 0.07rem solid #110038; }
+        .create_gifs_box .window_scene6 .gifuploadbox .button_finish button:hover {
+          outline: 0.21rem dotted black;
+          outline-offset: -0.5rem; }
+  .create_gifs_box .window_error_upload {
+    background: #e6e6e6;
+    box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+    margin: 5.42rem auto 10.85rem auto;
+    max-width: 700px;
+    padding: 2px; }
+    .create_gifs_box .window_error_upload .title_stage7 {
+      background-image: linear-gradient(90deg, #4180F6 0%, #F7C9F3 100%);
+      padding: 0.42rem;
+      position: relative; }
+      .create_gifs_box .window_error_upload .title_stage7 h3 {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold; }
+      .create_gifs_box .window_error_upload .title_stage7 button {
+        width: 1.14rem;
+        height: 1rem;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        z-index: 1;
+        border: none; }
+    .create_gifs_box .window_error_upload .container_error {
+      margin: 2.28rem;
+      display: flex;
+      align-items: center;
+      flex-flow: column nowrap; }
+      .create_gifs_box .window_error_upload .container_error img {
+        border: 1px solid #979797;
+        width: 100%;
+        max-width: 22.85rem;
+        margin-bottom: 1.25rem; }
+      .create_gifs_box .window_error_upload .container_error p {
+        margin-bottom: 1.14rem;
+        font-size: 1.14rem;
+        font-weight: bold;
+        color: #110038; }
+      .create_gifs_box .window_error_upload .container_error .button_error button {
+        background-color: #F7C9F3;
+        color: #110038;
+        border: 1px solid #110038;
+        padding: 2px;
+        font-size: 1.14rem;
+        width: 6.5rem;
+        height: 2.7rem; }
+      .create_gifs_box .window_error_upload .container_error .button_error .button_again {
+        background-color: #fff4fd;
+        margin-right: 1.14rem;
+        width: 9.5rem;
+        height: 2.7rem; }
+      .create_gifs_box .window_error_upload .container_error .button_error button:hover {
+        outline: 0.21rem dotted black;
+        outline-offset: -0.5rem; }
+
+.mis_gifs_section {
+  display: none;
+  padding: 2.5rem 0 0 0; }
+  .mis_gifs_section .inicio_section {
+    margin: 0 10rem 0 7.14rem;
+    display: flex;
+    background: #fffafe;
+    border: 0.07rem solid #2E32FB;
+    box-shadow: inset -0.14rem -0.14rem 0 0 #E6DCE4, inset 0.14rem 0.14rem 0 0 #110038; }
+    .mis_gifs_section .inicio_section h3 {
+      font-size: 1rem;
+      padding: 0.5rem;
+      align-self: center;
+      color: #110038;
+      font-weight: lighter; }
+  .mis_gifs_section .mygifs_container {
+    margin: 1.36rem 10rem 0 7.43rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .mis_gifs_section .mygifs_container .model-gif {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      background: #B4B4B4;
+      box-shadow: inset -0.14rem -0.14rem 0 0 #5C5C5C, inset 0.14rem 0.14rem 0 0 #ffffff;
+      position: relative;
+      margin: 0 0 1.14rem 0; }
+      .mis_gifs_section .mygifs_container .model-gif .gifo {
+        width: 19vw;
+        height: 19vw;
+        object-fit: cover; }
 
 /*# sourceMappingURL=stylesdark.css.map */

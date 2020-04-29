@@ -5,6 +5,13 @@ nav{
         padding: 2.5rem 7rem;
         height: 4rem;
     }
+    #back_arrow{
+        display: none;
+        position: absolute;
+        left: -2rem;
+        height: 1.714rem;
+        top: 3rem;
+    }
     div{
         display: flex;
         padding: 3.14rem 10.04rem 2.5rem;

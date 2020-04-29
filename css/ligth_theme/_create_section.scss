@@ -1,5 +1,6 @@
 .create_gifs_box{
     margin-bottom: 4.57rem;
+    display: none;
     .window_scene1{
         margin: 5.42rem auto 10.85rem auto;
         background-color: #e6e6e6;
@@ -130,15 +131,15 @@
                     background-color: #F7C9F3;
                     border:0.07rem solid #110038;
                     padding: 2px;
-                    width: 10.80rem;
-                    height:2.13rem;
+                    width: 11.25rem;
+                    height:2.7rem;
                     img{
-                        height:1.14rem;
-                        width: 1.28rem;
+                        height:1.3rem;
+                        width: 1.3rem;
                         outline:0.07rem solid black;
-                        outline-offset: 0.45rem;
-                        margin-left: 4px;
-                        margin-top: 2.45px;
+                        outline-offset: 0.7rem;
+                        margin-left: 7.5px;
+                        margin-top: 1px;
                     }
                     span{
                         font-size: 1.14rem;
@@ -253,7 +254,7 @@
     }
     .window_scene5{
         background: #e6e6e6;
-        box-shadow: -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+        box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
         margin: 5.42rem auto 10.85rem auto;
         max-width: 860px;
         padding: 2px;
@@ -339,7 +340,7 @@
     }
     .window_scene6{
         background: #e6e6e6;
-        box-shadow: -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+        box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
         margin: 5.42rem auto 10.85rem auto;
         max-width: 700px;
         padding: 2px;
@@ -391,6 +392,91 @@
                         font-size: 16px;
                         height: 2.5rem;
                     }
+                    button:hover{
+                        @include dot-border;
+                    }
+                }
+            }
+            .button_finish{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    color: #110038;
+                    background: #F7C9F3;
+                    box-shadow: -1px -1px 0 0 #997D97, inset 1px 1px 0 0 white;
+                    padding: 2px;
+                    width: 6.5rem;
+                    height: 2.7rem;
+                    font-size: 1.14rem;
+                    border: 0.07rem solid #110038;
+                }
+                button:hover{
+                    @include dot-border;
+                }
+
+            }
+        }
+    }
+    .window_error_upload{
+        background: #e6e6e6;
+        box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
+        margin: 5.42rem auto 10.85rem auto;
+        max-width: 700px;
+        padding: 2px;
+        .title_stage7{
+            background-image:linear-gradient(90deg,#4180F6 0%,#F7C9F3 100%);
+            padding: 0.42rem;
+            position: relative;
+            h3{
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            button{
+                width: 1.14rem;
+                height: 1rem;
+                position: absolute;
+                right: 0.5rem;
+                top: 0.5rem;
+                z-index: 1;
+                border: none;
+            }
+        }
+        .container_error{
+            margin: 2.28rem;
+            display: flex;
+            align-items: center;
+            flex-flow: column nowrap;
+            img{
+                border: 1px solid #979797;
+                width: 100%;
+                max-width: 22.85rem;
+                margin-bottom: 1.25rem;
+            }
+            p{
+                margin-bottom: 1.14rem;
+                font-size: 1.14rem;
+                font-weight: bold;
+                color: #110038;
+            }
+            .button_error{
+                button{
+                    background-color: #F7C9F3;
+                    color: #110038;
+                    border: 1px solid #110038;
+                    padding: 2px;
+                    font-size: 1.14rem;
+                    width: 6.5rem;
+                    height: 2.7rem;
+                }
+                .button_again{
+                    background-color: #fff4fd;
+                    margin-right: 1.14rem;
+                    width: 9.5rem;
+                    height: 2.7rem;
+                }
+                button:hover{
+                    @include dot-border;
                 }
             }
         }

@@ -19,6 +19,7 @@
     <nav>
         <a href="index.html">
             <img id="logo_img" src="assets/gifOF_logo.png" alt="logo_gifos">
+            <img id="back_arrow" src="assets/arrow.svg" alt="atras_flecha">
         </a>
         <div>
             <button class="boton_crear">Crear Guifos</button>
@@ -132,7 +133,7 @@
                         </div>
                     </div>
                     <div class="create_buttons">
-                        <button class="cancel_button">Cancelar</button>
+                        <button class="cancel_button" onclick="window.location.href='index.html'">Cancelar</button>
                         <button class="begin_button">Comenzar</button>
                     </div>
                 </div>
@@ -145,7 +146,7 @@
                 <div class="video_box">
                     <video class="video_elemet"></video>
                     <div class="capture_gifs">
-                        <button>
+                        <button class="capture_button">
                             <img src="assets/camera.svg" alt="camera_icon">
                             <span>Capturar</span>
                         </button>
@@ -198,25 +199,28 @@
                             <button>Descargar Guifo</button>
                         </div>
                     </div>
-                    <button>Listo</button>
+                    <div class="button_finish">
+                        <button>Listo</button>
+                    </div>
                 </div>
             </div>
             <div class="window_error_upload" id="error_upload">
-                <div class="title_stage6">
+                <div class="title_stage7">
                     <h3>Fatal error</h3>
                     <button><img src="assets/button close.svg" alt=""></button>
                 </div>
-                <div>
+                <div class="container_error">
                     <img src="assets/ops.jpg" alt="eror-img">
                     <p>Tu gifo no pudo ser creado</p>
-                    <div>
-                        <button>Reintentar</button>
+                    <p>mensaje de error etapa x</p>
+                    <div class="button_error">
+                        <button class="button_again">Reintentar</button>
                         <button>Listo</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="my_gifs" class="mis_gis">
+        <section id="my_gifs" class="mis_gifs_section">
             <div class="inicio_section">
                 <h3 id="result_title">Mis guifos</h3>
             </div>
