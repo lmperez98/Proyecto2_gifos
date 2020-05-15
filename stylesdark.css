@@ -26,6 +26,12 @@ nav {
   nav img {
     padding: 2.5rem 7rem;
     height: 4rem; }
+  nav #back_arrow {
+    display: none;
+    position: absolute;
+    left: -2rem;
+    height: 1.714rem;
+    top: 3rem; }
   nav div {
     display: flex;
     padding: 3.14rem 10.04rem 2.5rem; }
@@ -45,11 +51,12 @@ nav {
       nav div .boton_crear:active {
         background: #110038; }
     nav div .boton_crear:hover {
-      outline: 0.21rem dotted black;
-      outline-offset: -0.5rem; }
+      outline: 0.07rem dotted black;
+      outline-offset: -0.3rem;
+      background-color: #CE36DB; }
     nav div button:hover {
-      outline: 0.21rem dotted black;
-      outline-offset: -0.5rem; }
+      outline: 0.07rem dotted black;
+      outline-offset: -0.3rem; }
     nav div .boton_cambiar_tema {
       position: relative;
       margin: 0px;
@@ -64,6 +71,10 @@ nav {
         padding: 0.93rem 1.07rem; }
         nav div .boton_cambiar_tema .boton_tema:active {
           background: #110038; }
+      nav div .boton_cambiar_tema .boton_tema:hover {
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem;
+        background-color: #CE36DB; }
       nav div .boton_cambiar_tema .flecha_abajo {
         border: solid 0.07rem;
         background-color: #EE3EFE;
@@ -75,10 +86,13 @@ nav {
         nav div .boton_cambiar_tema .flecha_abajo:active {
           background: #110038; }
         nav div .boton_cambiar_tema .flecha_abajo .icono_flecha_abajo {
-          color: #ffffff;
           margin: 0;
           padding: 0;
           height: auto; }
+      nav div .boton_cambiar_tema .flecha_abajo:hover {
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem;
+        background-color: #CE36DB; }
       nav div .boton_cambiar_tema .escoger_temas {
         display: none;
         position: absolute;
@@ -96,9 +110,6 @@ nav {
           box-shadow: inset -0.07rem -0.07rem 0 0 #b4b4b4, inset 0.07rem 0.07rem 0 0 #ffffff;
           font-size: 1.14rem;
           text-align: left; }
-        nav div .boton_cambiar_tema .escoger_temas button:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem; }
         nav div .boton_cambiar_tema .escoger_temas .boton_dark {
           background: #2E32FB;
           color: #FFFFFF;
@@ -113,8 +124,8 @@ nav {
     border: none;
     box-shadow: none; }
   nav .mis_gifs:hover {
-    outline: 0.21rem dotted white;
-    outline-offset: -0.5rem; }
+    outline: 0.07rem dotted white;
+    outline-offset: -0.3rem; }
   nav .mis_gifs:focus {
     color: #9674e6; }
 
@@ -155,8 +166,8 @@ nav {
         .search_tab .navbar_search .inputbar_search .search_bar:focus ~ button {
           background-color: #EE3EFE; }
           .search_tab .navbar_search .inputbar_search .search_bar:focus ~ button:hover {
-            outline: 0.21rem dotted black;
-            outline-offset: -0.5rem; }
+            outline: 0.07rem dotted black;
+            outline-offset: -0.3rem; }
           .search_tab .navbar_search .inputbar_search .search_bar:focus ~ button p {
             color: #ffffff; }
           .search_tab .navbar_search .inputbar_search .search_bar:focus ~ button .lupa_buscar {
@@ -184,8 +195,8 @@ nav {
         .search_tab .navbar_search .inputbar_search button .lupa {
           display: none; }
         .search_tab .navbar_search .inputbar_search button:active {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem;
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem;
           background: #EE3EFE; }
           .search_tab .navbar_search .inputbar_search button:active p {
             color: #ffffff; }
@@ -214,8 +225,8 @@ nav {
           margin: 1.21rem 9.21rem 1.21rem 1.14rem;
           position: relative; }
         .search_tab .navbar_search .inputbar_search .menu_buscar li:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem;
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem;
           background: #dbdbdb; }
         .search_tab .navbar_search .inputbar_search .menu_buscar a {
           text-decoration: none;
@@ -293,14 +304,14 @@ nav {
         line-height: 1.29rem;
         font-size: 1rem; }
       .container_sugest .contenedor_sugerencia_gifs .gif_sugerido button:hover {
-        outline: 0.21rem dotted black;
-        outline-offset: -0.5rem; }
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem; }
       .container_sugest .contenedor_sugerencia_gifs .gif_sugerido button:hover ~ .gif {
-        outline: 0.21rem dotted black;
-        outline-offset: -0.5rem; }
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem; }
       .container_sugest .contenedor_sugerencia_gifs .gif_sugerido .gif:hover ~ button {
-        outline: 0.21rem dotted black;
-        outline-offset: -0.5rem; }
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem; }
 
 .trend_section {
   padding: 4.57rem 0 0 0; }
@@ -334,8 +345,8 @@ nav {
         height: 19vw;
         object-fit: cover; }
         .trend_section .trend_gifs .model-gif .gifo:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem; }
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem; }
         .trend_section .trend_gifs .model-gif .gifo:hover ~ .gifo_titulo {
           display: flex;
           flex-wrap: nowrap;
@@ -377,7 +388,7 @@ nav {
   margin-bottom: 4.57rem;
   display: none; }
   .create_gifs_box .window_scene1 {
-    margin: 5.42rem auto 10.85rem auto;
+    margin: 5.42rem auto 2rem auto;
     background-color: #e6e6e6;
     box-shadow: inset -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
     max-width: 700px; }
@@ -440,8 +451,8 @@ nav {
         .create_gifs_box .window_scene1 .creategifs_steps .create_buttons .begin_button {
           background-color: #F7C9F3; }
         .create_gifs_box .window_scene1 .creategifs_steps .create_buttons button:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem; }
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem; }
   .create_gifs_box .window_scene2 {
     background-color: #e6e6e6;
     box-shadow: inset -0.14rem -0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
@@ -496,8 +507,8 @@ nav {
             font-size: 1.14rem;
             padding-right: 1.75rem; }
         .create_gifs_box .window_scene2 .video_box .capture_gifs button:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem;
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem;
           background-color: #E6BBE2; }
       .create_gifs_box .window_scene2 .video_box .window_capture_upload {
         display: flex;
@@ -561,8 +572,8 @@ nav {
             font-size: 1.14rem;
             padding-right: 2rem; }
         .create_gifs_box .window_scene2 .video_box .window_capture_upload .button_ready:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem; }
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem; }
         .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif {
           display: block; }
           .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif button {
@@ -581,8 +592,8 @@ nav {
             width: 9.75rem;
             height: 2.5rem; }
           .create_gifs_box .window_scene2 .video_box .window_capture_upload .repeat_uploadgif button:hover {
-            outline: 0.21rem dotted black;
-            outline-offset: -0.5rem; }
+            outline: 0.07rem dotted black;
+            outline-offset: -0.3rem; }
   .create_gifs_box .window_scene5 {
     background: #e6e6e6;
     box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
@@ -653,8 +664,8 @@ nav {
         border: 0.07rem solid #110038;
         box-shadow: -0.07rem -0.07rem 0 0 #997D97, inset 0.07rem 0.07rem 0 0 white; }
       .create_gifs_box .window_scene5 .cancel_button button:hover {
-        outline: 0.21rem dotted black;
-        outline-offset: -0.5rem; }
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem; }
   .create_gifs_box .window_scene6 {
     background: #e6e6e6;
     box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
@@ -704,8 +715,8 @@ nav {
             font-size: 16px;
             height: 2.5rem; }
           .create_gifs_box .window_scene6 .gifuploadbox .gifspreview div button:hover {
-            outline: 0.21rem dotted black;
-            outline-offset: -0.5rem; }
+            outline: 0.07rem dotted black;
+            outline-offset: -0.3rem; }
       .create_gifs_box .window_scene6 .gifuploadbox .button_finish {
         display: flex;
         justify-content: flex-end; }
@@ -719,8 +730,8 @@ nav {
           font-size: 1.14rem;
           border: 0.07rem solid #110038; }
         .create_gifs_box .window_scene6 .gifuploadbox .button_finish button:hover {
-          outline: 0.21rem dotted black;
-          outline-offset: -0.5rem; }
+          outline: 0.07rem dotted black;
+          outline-offset: -0.3rem; }
   .create_gifs_box .window_error_upload {
     background: #e6e6e6;
     box-shadow: 0.14rem 0.14rem 0 0 #b4b4b4, inset 0.14rem 0.14rem 0 0 #ffffff;
@@ -772,8 +783,8 @@ nav {
         width: 9.5rem;
         height: 2.7rem; }
       .create_gifs_box .window_error_upload .container_error .button_error button:hover {
-        outline: 0.21rem dotted black;
-        outline-offset: -0.5rem; }
+        outline: 0.07rem dotted black;
+        outline-offset: -0.3rem; }
 
 .mis_gifs_section {
   display: none;
@@ -790,12 +801,12 @@ nav {
       align-self: center;
       color: #110038;
       font-weight: lighter; }
-  .mis_gifs_section .mygifs_container {
+  .mis_gifs_section .misgifs {
     margin: 1.36rem 10rem 0 7.43rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .mis_gifs_section .mygifs_container .model-gif {
+    .mis_gifs_section .misgifs .model-gif {
       display: flex;
       flex-direction: column;
       border: none;
@@ -803,7 +814,7 @@ nav {
       box-shadow: inset -0.14rem -0.14rem 0 0 #5C5C5C, inset 0.14rem 0.14rem 0 0 #ffffff;
       position: relative;
       margin: 0 0 1.14rem 0; }
-      .mis_gifs_section .mygifs_container .model-gif .gifo {
+      .mis_gifs_section .misgifs .model-gif .gifo {
         width: 19vw;
         height: 19vw;
         object-fit: cover; }

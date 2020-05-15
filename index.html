@@ -119,7 +119,8 @@
                         <img src="assets/window img.png" alt="icono_ventana">
                         <div class="gifs_step">
                             <p class="creategifs_p1">Aquí podrás crear tus propios guifos</p>
-                            <p class="creategifs_p2">Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén
+                            <p class="creategifs_p2">Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen
+                                con tu cámara y obtén
                                 guifos
                                 personalizados. Los pasos para crear tu guifo son:
                             </p>
@@ -182,7 +183,7 @@
                     <p class="time_text">Tiempo restante: <span>38 años</span> algunos minutos</p>
                 </div>
                 <div class="cancel_button">
-                    <button>Cancelar</button>
+                    <button id="cancel_upload">Cancelar</button>
                 </div>
             </div>
             <div class="window_scene6" id="stage6">
@@ -195,12 +196,12 @@
                         <img src="assets/descarga.png" alt="gif_grabado" id="gif_upload">
                         <div>
                             <p>Guifo creado con éxito</p>
-                            <button>Copiar Enlace Guifo</button>
-                            <button>Descargar Guifo</button>
+                            <button id="copy_button">Copiar Enlace Guifo</button>
+                            <button id="download_button">Descargar Guifo</button>
                         </div>
                     </div>
                     <div class="button_finish">
-                        <button>Listo</button>
+                        <button id="finish_button">Listo</button>
                     </div>
                 </div>
             </div>
@@ -215,7 +216,7 @@
                     <p class="error_msg">mensaje de error etapa x</p>
                     <div class="button_error">
                         <button class="button_again">Reintentar</button>
-                        <button>Listo</button>
+                        <button id="ok_fuckit_button">Listo</button>
                     </div>
                 </div>
             </div>
@@ -235,6 +236,7 @@
 <script src="js/search_sugest.js"></script>
 <script src="js/change_theme.js"></script>
 <script src="js/stopwatch.js"></script>
+<script src="js/misGifs.js"></script>
 <script src="js/creategifs_section.js"></script>
 
 </html>

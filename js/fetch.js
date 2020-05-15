@@ -13,9 +13,9 @@ const fetchAny = async (url) => {
     }
 }
 
-const fetchUpload = async (url) => {
+const fetchUpload = async (url, params = null) => {
     try {
-        let response = await fetch(url);
+        let response = await fetch(url,params);
         if (response.ok) {
             let res = await response.json()
             return res;

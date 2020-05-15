@@ -5,6 +5,13 @@ nav{
         padding: 2.5rem 7rem;
         height: 4rem;
     }
+    #back_arrow{
+        display: none;
+        position: absolute;
+        left: -2rem;
+        height: 1.714rem;
+        top: 3rem;
+    }
     div{
         display: flex;
         padding: 3.14rem 10.04rem 2.5rem;
@@ -25,6 +32,7 @@ nav{
         }
         .boton_crear:hover{
             @include dot-border;
+            background-color: #CE36DB;
         }
         button:hover{
             @include dot-border;
@@ -42,6 +50,10 @@ nav{
                     background:#110038;
                 }
             }
+            .boton_tema:hover{
+                @include dot-border;
+                background-color: #CE36DB;
+            }
             .flecha_abajo{
                 @include button;
                 position: relative;
@@ -51,11 +63,14 @@ nav{
                     background:#110038 ;
                 }
                 .icono_flecha_abajo{
-                    color: #ffffff;
                     margin: 0;
                     padding: 0;
                     height: auto;
                 }
+            }
+            .flecha_abajo:hover{
+                @include dot-border;
+                background-color: #CE36DB;
             }
             .escoger_temas{
                 display: none;
@@ -74,9 +89,6 @@ nav{
                     box-shadow: inset -0.07rem -0.07rem 0 0 #b4b4b4, inset 0.07rem 0.07rem 0 0 #ffffff;
                     font-size: 1.14rem;
                     text-align: left;
-                }
-                button:hover{
-                    @include dot-border
                 }
                 .boton_dark{
                     background: #2E32FB;
@@ -98,8 +110,8 @@ nav{
         box-shadow: none; 
     }
     .mis_gifs:hover{
-        outline: 0.21rem dotted white;
-        outline-offset: -0.5rem; 
+        outline: 0.07rem dotted white;
+        outline-offset: -0.3rem;
     }
     .mis_gifs:focus{
         color: #9674e6;
